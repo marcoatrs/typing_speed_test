@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/time.ico</file>
+    <file>icons/fail.ico</file>
+    <file>icons/speed.ico</file>
+    <file>icons/sand_clock.ico</file>
+    <file>image/letters.jpg</file>
+    <file>icons/drop_down.ico</file>
+    <file>icons/key.ico</file>
+  </qresource>
+</RCC>
