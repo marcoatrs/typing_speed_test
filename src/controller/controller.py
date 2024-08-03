@@ -3,13 +3,12 @@ import statistics
 from time import perf_counter
 
 from PySide6 import QtCore as qc
-from PySide6 import QtWidgets as qw
 
 from src.controller.events import set_ui_events
 from src.controller.graphs import GuiChart
 from src.controller.language import set_languages
 from src.controller.load_screen import LoadScreen
-from src.controller.screen import TypingTest
+from src.controller.screen import MyApp, TypingTest
 from src.controller.type_test import Typing
 from src.db.read_db import get_db
 
@@ -17,18 +16,18 @@ from src.db.read_db import get_db
 class Controller:
 
     def __init__(self):
-        self._app = qw.QApplication([])
+        self._app = MyApp([])
         self.view = TypingTest()
         self.load_screen = LoadScreen()
         self.typing = Typing()
         self.results_graph = GuiChart(self.view.web_view_results,
                                       "Speed Test Results", "", "WPM")
         self.db = []
-        set_ui_events(self)
         self.total_time = 0
         self.test_active = False  # Ya inicio
         self.can_start = False  # Puede iniciar
         self.test_finish = False  # Ya termino
+        set_ui_events(self)
 
     def run(self):
         set_languages(self.view)
@@ -62,7 +61,8 @@ class Controller:
             print("No data")
             return
         text = random.choice(self.db)[0]
-        self.view.text_test.setText(text.replace(" ", "_"))
+        html = f"<span style=color:black;>{text}</span>'"
+        self.view.text_test.setHtml(html) # .replace(" ", "_")
         self.typing.load_text(text)
 
     def test_show_timer(self):
@@ -85,8 +85,8 @@ class Controller:
         if self.test_finish or not self.can_start:
             return
 
-        #  | alt | crtl | windows | tab
-        if event.key() in [16777248, 16777251, 16777249, 16777250, 16777217]:
+        #  | alt | crtl | windows | tab | CapsLock
+        if event.key() in [16777248, 16777251, 16777249, 16777250, 16777217, 16777252]:
             return
 
         # Backspace
@@ -100,12 +100,15 @@ class Controller:
             self.typing.get_timer.start(1000)
             self.total_time = perf_counter()
             self.test_active = True
+            # self.view.restart_cursor()
 
         if not self.test_active:
             return
 
         self.typing.push_element(event.text())
         self.view.label_test.setText(str(self.typing))
+
+        # self.view.move_cursor(self.typing.current)
 
         if self.typing.current == (len(self.typing.text) - 1):
             self.typing.get_timer.stop()
@@ -130,3 +133,23 @@ class Controller:
         self.view.label_success_per.setText(
             f"Success percentage: {success_per}%")
         self.results_graph.plot(self.typing.wpm_list)
+
+        score = round(wpm * success_per / 100, 3)
+        self.view.label_results_title.setText(f"Score: {score}")
+
+    def restart(self):
+        # Variables
+        self.db = []
+        self.total_time = 0
+        self.test_active = False  # Ya inicio
+        self.can_start = False  # Puede iniciar
+        self.test_finish = False  # Ya termino
+
+        self.typing.init()
+
+        self.view.label_wpm.setText("  WPM:")
+        self.view.label_failures.setText("  Failures:")
+        self.view.label_time.setText("  Time:")
+        self.view.label_test.clear()
+
+        self.view.stackedWidget.setCurrentWidget(self.view.page_select)

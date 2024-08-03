@@ -13,6 +13,11 @@
     <height>602</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>Roboto Mono</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Typing Test</string>
   </property>
@@ -35,20 +40,41 @@
 */</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="font">
+    <font>
+     <family>Roboto Mono</family>
+    </font>
+   </property>
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
      <widget class="QStackedWidget" name="stackedWidget">
+      <property name="font">
+       <font>
+        <family>Roboto Mono</family>
+       </font>
+      </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">background-color: rgb(251, 255, 255);</string>
       </property>
       <property name="currentIndex">
        <number>1</number>
       </property>
-      <widget class="QWidget" name="page_init"/>
+      <widget class="QWidget" name="page_init">
+       <property name="font">
+        <font>
+         <family>Roboto Mono</family>
+        </font>
+       </property>
+      </widget>
       <widget class="QWidget" name="page_select">
+       <property name="font">
+        <font>
+         <family>Roboto Mono</family>
+        </font>
+       </property>
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="0" column="1">
-         <layout class="QGridLayout" name="gdl_select" rowstretch="1,3,3,0,0" columnstretch="2,2">
+         <layout class="QGridLayout" name="gdl_select" rowstretch="1,3,3,0,0" columnstretch="5,2">
           <property name="spacing">
            <number>15</number>
           </property>
@@ -57,9 +83,15 @@
             <property name="enabled">
              <bool>true</bool>
             </property>
+            <property name="font">
+             <font>
+              <family>Roboto Mono</family>
+             </font>
+            </property>
             <property name="styleSheet">
              <string notr="true">QTextEdit {
 	border: None;
+	background-color: white;
 }
 
 QTextEdit:disabled {
@@ -83,14 +115,23 @@ p, li { white-space: pre-wrap; }
 hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:36pt; font-weight:700;&quot;&gt;Ready to &lt;/span&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&quot; font-size:36pt; font-weight:700;&quot;&gt;measure your &lt;/span&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&quot; font-size:36pt; font-weight:700; color:#cc5803;&quot;&gt;typing speed?&lt;/span&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&quot; font-size:36pt; font-weight:700;&quot;&gt;Show off your &lt;/span&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&quot; font-size:36pt; font-weight:700; color:#cc5803;&quot;&gt;skill&lt;/span&gt;&lt;span style=&quot; font-size:36pt; font-weight:700;&quot;&gt; with every&lt;br /&gt;keystroke!&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:36pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto Mono'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Space Mono'; font-size:26pt; font-weight:700; color:#000000;&quot;&gt;Ready to &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Space Mono'; font-size:26pt; font-weight:700; color:#000000;&quot;&gt;measure your &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Space Mono'; font-size:26pt; font-weight:700; color:#f7934c;&quot;&gt;typing speed&lt;/span&gt;&lt;span style=&quot; font-family:'Space Mono'; font-size:26pt; font-weight:700; color:#000000;&quot;&gt;?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Space Mono'; font-size:26pt; font-weight:700; color:#000000;&quot;&gt;Show off your &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Space Mono'; font-size:26pt; font-weight:700; color:#f7934c;&quot;&gt;skill&lt;/span&gt;&lt;span style=&quot; font-family:'Space Mono'; font-size:26pt; font-weight:700;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Space Mono'; font-size:26pt; font-weight:700; color:#353535;&quot;&gt;with every&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Space Mono'; font-size:26pt; font-weight:700; color:#353535;&quot;&gt;keystroke!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
           <item row="1" column="1" rowspan="2">
            <widget class="QLabel" name="label_2">
+            <property name="font">
+             <font>
+              <family>Roboto Mono</family>
+             </font>
+            </property>
             <property name="styleSheet">
              <string notr="true">background-image: url(:/icons/image/letters.jpg);</string>
             </property>
@@ -106,6 +147,11 @@ li.checked::marker { content: &quot;\2612&quot;; }
             </property>
             <item>
              <widget class="QLabel" name="label_round">
+              <property name="font">
+               <font>
+                <family>Roboto Mono</family>
+               </font>
+              </property>
               <property name="styleSheet">
                <string notr="true">background-color: #FFC15E;
 border-top-right-radius: 50%;
@@ -120,6 +166,7 @@ border-top-right-radius: 50%;
              <widget class="QLabel" name="label_title1">
               <property name="font">
                <font>
+                <family>Roboto Mono</family>
                 <pointsize>36</pointsize>
                </font>
               </property>
@@ -138,6 +185,7 @@ border-top-right-radius: 50%;
              <widget class="QLabel" name="label_title2">
               <property name="font">
                <font>
+                <family>Roboto Mono</family>
                 <pointsize>36</pointsize>
                </font>
               </property>
@@ -154,22 +202,10 @@ border-top-right-radius: 50%;
           <item row="3" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_3">
             <item>
-             <spacer name="horizontalSpacer">
-              <property name="orientation">
-               <enum>Qt::Orientation::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
              <widget class="QComboBox" name="combo_language">
               <property name="font">
                <font>
+                <family>Roboto Mono</family>
                 <pointsize>18</pointsize>
                 <bold>false</bold>
                </font>
@@ -211,25 +247,13 @@ QComboBox::down-arrow {
           <item row="4" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_4">
             <item>
-             <spacer name="horizontalSpacer_2">
-              <property name="orientation">
-               <enum>Qt::Orientation::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
              <widget class="QPushButton" name="push_start">
               <property name="enabled">
                <bool>true</bool>
               </property>
               <property name="font">
                <font>
+                <family>Roboto Mono</family>
                 <pointsize>18</pointsize>
                </font>
               </property>
@@ -256,7 +280,7 @@ QPushButton:disabled {
 }</string>
               </property>
               <property name="text">
-               <string>          Start  →          </string>
+               <string>Start  →        </string>
               </property>
              </widget>
             </item>
@@ -267,6 +291,11 @@ QPushButton:disabled {
        </layout>
       </widget>
       <widget class="QWidget" name="page_load_screen">
+       <property name="font">
+        <font>
+         <family>Roboto Mono</family>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: #FFC15E;</string>
        </property>
@@ -275,6 +304,11 @@ QPushButton:disabled {
          <layout class="QGridLayout" name="gld_load">
           <item row="1" column="1">
            <widget class="QLabel" name="label_load">
+            <property name="font">
+             <font>
+              <family>Roboto Mono</family>
+             </font>
+            </property>
             <property name="styleSheet">
              <string notr="true">background-color: transparent;</string>
             </property>
@@ -343,6 +377,11 @@ QPushButton:disabled {
        </layout>
       </widget>
       <widget class="QWidget" name="page_test">
+       <property name="font">
+        <font>
+         <family>Roboto Mono</family>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: #FFC15E;</string>
        </property>
@@ -352,15 +391,26 @@ QPushButton:disabled {
           <item row="1" column="0">
            <widget class="QTextEdit" name="text_test">
             <property name="enabled">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
             <property name="font">
              <font>
+              <family>Roboto Mono</family>
               <pointsize>28</pointsize>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: rgb(235, 235, 235);</string>
+             <string notr="true">.fondo-rojo {
+    background-color: #FF8080;
+}
+
+QTextEdit{
+	background-color: white;
+}
+</string>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
             </property>
             <property name="html">
              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -369,8 +419,8 @@ p, li { white-space: pre-wrap; }
 hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:28pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:36pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto Mono'; font-size:28pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:36pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
@@ -378,6 +428,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
            <widget class="QLabel" name="label_test">
             <property name="font">
              <font>
+              <family>Roboto Mono</family>
               <pointsize>36</pointsize>
              </font>
             </property>
@@ -404,6 +455,12 @@ color: rgb(163, 163, 163);</string>
                 </property>
                 <item>
                  <widget class="QLabel" name="label_4">
+                  <property name="font">
+                   <font>
+                    <family>Roboto Mono</family>
+                    <bold>false</bold>
+                   </font>
+                  </property>
                   <property name="styleSheet">
                    <string notr="true">background-color: #CC5803;
 color: #1F1300;
@@ -427,8 +484,9 @@ border-top-left-radius: 50%;</string>
                  <widget class="QLabel" name="label_wpm">
                   <property name="font">
                    <font>
+                    <family>Roboto Mono</family>
                     <pointsize>14</pointsize>
-                    <bold>true</bold>
+                    <bold>false</bold>
                    </font>
                   </property>
                   <property name="styleSheet">
@@ -450,6 +508,12 @@ border-bottom-right-radius: 50%;</string>
                 </property>
                 <item>
                  <widget class="QLabel" name="label_5">
+                  <property name="font">
+                   <font>
+                    <family>Roboto Mono</family>
+                    <bold>false</bold>
+                   </font>
+                  </property>
                   <property name="styleSheet">
                    <string notr="true">background-color: #CC5803;
 color: #1F1300;
@@ -473,8 +537,9 @@ border-top-left-radius: 50%;</string>
                  <widget class="QLabel" name="label_failures">
                   <property name="font">
                    <font>
+                    <family>Roboto Mono</family>
                     <pointsize>14</pointsize>
-                    <bold>true</bold>
+                    <bold>false</bold>
                    </font>
                   </property>
                   <property name="styleSheet">
@@ -496,6 +561,12 @@ border-bottom-right-radius: 50%;</string>
                 </property>
                 <item>
                  <widget class="QLabel" name="label_6">
+                  <property name="font">
+                   <font>
+                    <family>Roboto Mono</family>
+                    <bold>false</bold>
+                   </font>
+                  </property>
                   <property name="styleSheet">
                    <string notr="true">background-color: #CC5803;
 color: #1F1300;
@@ -519,8 +590,9 @@ border-top-left-radius: 50%;</string>
                  <widget class="QLabel" name="label_time">
                   <property name="font">
                    <font>
+                    <family>Roboto Mono</family>
                     <pointsize>14</pointsize>
-                    <bold>true</bold>
+                    <bold>false</bold>
                    </font>
                   </property>
                   <property name="styleSheet">
@@ -544,69 +616,17 @@ border-bottom-right-radius: 50%;</string>
        </layout>
       </widget>
       <widget class="QWidget" name="page_results">
+       <property name="font">
+        <font>
+         <family>Roboto Mono</family>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: #CC5803;</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_6">
         <item row="0" column="0">
-         <layout class="QGridLayout" name="gdl_main_results" rowstretch="1,10,3" columnstretch="1,1">
-          <item row="1" column="1">
-           <layout class="QGridLayout" name="gdl_results">
-            <item row="0" column="0">
-             <widget class="QWebEngineView" name="web_view_results">
-              <property name="url">
-               <url>
-                <string>about:blank</string>
-               </url>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="0" column="0" colspan="2">
-           <widget class="QLabel" name="label_results_title">
-            <property name="font">
-             <font>
-              <pointsize>36</pointsize>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-color: #FFC15E;
-color: #1F1300;
-border-top-left-radius: 50%;
-border-bottom-right-radius: 50%;</string>
-            </property>
-            <property name="text">
-             <string>Results:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignmentFlag::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0" colspan="2">
-           <widget class="QLabel" name="label_success_per">
-            <property name="font">
-             <font>
-              <pointsize>24</pointsize>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-color: #FFC15E;
-border-radius: 50%;</string>
-            </property>
-            <property name="text">
-             <string>Success percentage:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignmentFlag::AlignCenter</set>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
+         <layout class="QGridLayout" name="gdl_main_results" rowstretch="1,10,3" columnstretch="3,2,1">
           <item row="1" column="0">
            <layout class="QGridLayout" name="gridLayout">
             <item row="0" column="1">
@@ -632,8 +652,9 @@ border-radius: 50%;</string>
               </property>
               <property name="font">
                <font>
+                <family>Roboto Mono</family>
                 <pointsize>24</pointsize>
-                <bold>true</bold>
+                <bold>false</bold>
                </font>
               </property>
               <property name="styleSheet">
@@ -641,7 +662,7 @@ border-radius: 50%;</string>
 border-radius: 50%;</string>
               </property>
               <property name="text">
-               <string>WPM: 38</string>
+               <string>WPM:38</string>
               </property>
               <property name="textFormat">
                <enum>Qt::TextFormat::PlainText</enum>
@@ -695,6 +716,90 @@ border-radius: 50%;</string>
             </item>
            </layout>
           </item>
+          <item row="2" column="0" colspan="2">
+           <widget class="QLabel" name="label_success_per">
+            <property name="font">
+             <font>
+              <family>Roboto Mono</family>
+              <pointsize>24</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: #FFC15E;
+border-radius: 20px;</string>
+            </property>
+            <property name="text">
+             <string>Success percentage:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QPushButton" name="push_home">
+            <property name="font">
+             <font>
+              <family>Roboto Mono</family>
+              <pointsize>24</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: #F7934C;
+</string>
+            </property>
+            <property name="text">
+             <string> Return </string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0" colspan="3">
+           <widget class="QLabel" name="label_results_title">
+            <property name="font">
+             <font>
+              <family>Roboto Mono</family>
+              <pointsize>36</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: #FFC15E;
+color: #1F1300;
+border-top-left-radius: 50%;
+border-bottom-right-radius: 50%;</string>
+            </property>
+            <property name="text">
+             <string>Results:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="2">
+           <layout class="QGridLayout" name="gdl_results">
+            <item row="0" column="0">
+             <widget class="QWebEngineView" name="web_view_results">
+              <property name="font">
+               <font>
+                <family>Roboto Mono</family>
+               </font>
+              </property>
+              <property name="url">
+               <url>
+                <string>about:blank</string>
+               </url>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
          </layout>
         </item>
        </layout>
@@ -712,35 +817,77 @@ border-radius: 50%;</string>
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>22</height>
+     <height>24</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Roboto Mono</family>
+    </font>
+   </property>
    <widget class="QMenu" name="menu_file">
+    <property name="font">
+     <font>
+      <family>Roboto Mono</family>
+     </font>
+    </property>
     <property name="title">
      <string>File</string>
     </property>
    </widget>
    <widget class="QMenu" name="menu_edit">
+    <property name="font">
+     <font>
+      <family>Roboto Mono</family>
+     </font>
+    </property>
     <property name="title">
      <string>Edit</string>
     </property>
    </widget>
    <widget class="QMenu" name="menu_view">
+    <property name="font">
+     <font>
+      <family>Roboto Mono</family>
+     </font>
+    </property>
     <property name="title">
      <string>View</string>
     </property>
    </widget>
    <widget class="QMenu" name="menu_help">
+    <property name="font">
+     <font>
+      <family>Roboto Mono</family>
+     </font>
+    </property>
     <property name="title">
      <string>Help</string>
     </property>
+    <addaction name="actionHow_play"/>
    </widget>
    <addaction name="menu_file"/>
    <addaction name="menu_edit"/>
    <addaction name="menu_view"/>
    <addaction name="menu_help"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="font">
+    <font>
+     <family>Roboto Mono</family>
+    </font>
+   </property>
+  </widget>
+  <action name="actionHow_play">
+   <property name="text">
+    <string>How play</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Space Mono</family>
+    </font>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>

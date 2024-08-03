@@ -17,6 +17,7 @@ def set_ui_events(self: "Controller"):
 
     # Push Buttons
     view.push_start.clicked.connect(self.load_db_info)
+    view.push_home.clicked.connect(self.restart)
 
     # Timers
     self.load_screen.timer.timeout.connect(self.load_screen_step)

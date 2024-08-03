@@ -6,7 +6,7 @@ class LoadScreen:
     def __init__(self):
         self.current_rotation = 0
         self._step = 30
-        self.data = qg.QPixmap(":/icons/icons/sand_clock.ico")
+        self.data = qg.QPixmap("icons/assets/loading.png")
         self.transform = qg.QTransform()
         self.timer = qc.QTimer()
 

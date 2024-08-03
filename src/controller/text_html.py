@@ -6,8 +6,11 @@ class HtmlParser:
         self.count = 0
 
     def parse_html(self, text: str, ok: bool) -> str:
-        color = "#00FF00" if ok else "#FF0000"
-        return f'<span style="color:{color};">{text}</span>'
+        if ok:
+            color = "#00FF00"
+            return f'<span style="color:{color};">{text}</span>'
+        color = "#FF8080"
+        return f'<span style="background-color: {color};">{text}</span>'
 
     def push(self, ok: bool = True):
         char = self.text[self.count]
@@ -33,5 +36,6 @@ class HtmlParser:
     def __str__(self) -> str:
         html_list = list(map(lambda item: item[2], self.registry))
         html = "".join(html_list)
-        html += f'<span>{self.text[self.count:]}</span>'
+        html += f'<span style="text-decoration: underline; color:black">{self.text[self.count]}</span>'
+        html += f'<span style=color:black;>{self.text[self.count + 1:]}</span>'
         return html

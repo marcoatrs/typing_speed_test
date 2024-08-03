@@ -7,16 +7,8 @@ from src.controller.text_html import HtmlParser
 class Typing:
 
     def __init__(self):
-        self.writes = deque(maxlen=15)
         self.get_timer = qc.QTimer()
-        self.text = ""
-        self.current = 0
-        self.words = 0
-        self.fails = 0
-        self.type_results: list[bool] = []
-        self.wpm_list = []
-        self.wpm = 0
-
+        self.init()
 
     def get_element(self):
         if self.writes:
@@ -41,6 +33,8 @@ class Typing:
 
     def calculate_wpm(self, total_time: int):
         self.wpm = 60 * self.words // total_time
+        if total_time < 10:
+            return
         self.wpm_list.append(self.wpm)
 
     def __str__(self) -> str:
@@ -48,7 +42,7 @@ class Typing:
 
     def load_text(self, text: str):
         self.text = text
-        self.html = HtmlParser(self.text.replace(" ", "_")) # ·
+        self.html = HtmlParser(self.text) # · .replace(" ", "_")
         self.current = 0
 
     def compare_char(self) -> bool:
@@ -56,7 +50,17 @@ class Typing:
         self.html.push(r)
         self.type_results.append(r)
         self.current += 1
-        self.words = len(self.text[:self.current].split(" "))
+        self.words = len(self.text[:self.current].split(" ")) - 1
         if not r:
             self.fails += 1
         return r
+
+    def init(self):
+        self.writes = deque(maxlen=15)
+        self.text = ""
+        self.current = 0
+        self.words = 0
+        self.fails = 0
+        self.type_results: list[bool] = []
+        self.wpm_list = []
+        self.wpm = 0
